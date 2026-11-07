@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llamaparse-pgvector-pipeline"
+version = "0.1.0"
+description = "Production connector linking LlamaParse AST Markdown table output with Neon / PostgreSQL pgvector and hybrid Lucene search."
+readme = "README.md"
+authors = [{ name = "Botmartz AI Solutions", email = "info@botmartz.com" }]
+license = { text = "Apache-2.0" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "llama-parse>=0.5.0",
+    "psycopg[binary]>=3.1.0",
+    "pgvector>=0.3.0",
+    "pydantic>=2.5.0",
+    "sentence-transformers>=3.0.0",
+]
+
+[project.urls]
+Homepage = "https://www.botmartz.com"
+Repository = "https://github.com/botmartz/llamaparse-pgvector-pipeline"
+Documentation = "https://www.botmartz.com/insights/document-parsing-bottleneck-llamaparse-ast-layout-table-reconstruction"
